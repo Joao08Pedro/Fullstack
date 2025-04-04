@@ -1,9 +1,11 @@
 import knex from "knex";
 import express from "express";
+import cors from "cors";
 
 const app = express();
 const port = 1212;
 app.use(express.json());
+app.use(cors());
 
 const knexDb = knex({
     client:"mysql2",
